@@ -21,6 +21,11 @@ echo “Installing Maccy clipboard manager”
 brew install --cask maccy
 
 echo
+echo "Installing Oh My Zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+echo
 echo “TODO:”
 echo “Iterm2: preferences: General -> Closing -> uncheck ‘Confirm Quit iTerm …’ ”
 echo “Configure Maccy…”
