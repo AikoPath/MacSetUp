@@ -19,6 +19,10 @@ echo “Installing 1Password”
 brew install --cask 1password
 
 echo
+echo "Installing Bitwarden"
+brew install bitwarden
+
+echo
 echo “Installing Maccy clipboard manager”
 brew install --cask maccy
 
