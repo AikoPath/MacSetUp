@@ -34,6 +34,10 @@ echo
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+echo "fixing zsh locale issue"
+echo "export LC_ALL=en_US.UTF-8                                                                [0:00:14]
+export LANG=en_US.UTF-8" >> ~/.zshrc
+
 echo
 echo “TODO:”
 echo “iterm: preferences: General -> Closing - uncheck Confirm Quit iTerm … ”
