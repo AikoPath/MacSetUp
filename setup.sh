@@ -15,20 +15,12 @@ echo “Installing Brave”
 brew install --cask brave-browser
 
 echo
-echo “Installing 1Password”
-brew install --cask 1password
-
-echo
 echo "Installing Bitwarden"
 brew install bitwarden
 
 echo
 echo “Installing Maccy clipboard manager”
 brew install --cask maccy
-
-echo
-echo "Installing NordVPN"
-brew install --cask nordvpn
 
 echo
 echo "Installing Oh My Zsh"
