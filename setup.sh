@@ -31,9 +31,18 @@ echo "export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8" >> ~/.zshrc
 
 echo
+echo "Configuring iTerm 2"
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 DimOnlyText -bool true
+
+iterm_plist="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
+if [ -f "$iterm_plist" ] && /usr/libexec/PlistBuddy -c "Print :'New Bookmarks':0:'Custom Directory'" "$iterm_plist" >/dev/null 2>&1; then
+  /usr/libexec/PlistBuddy -c "Set :'New Bookmarks':0:'Custom Directory' Recycle" "$iterm_plist"
+else
+  echo "  (skipped 'reuse previous directory' — launch iTerm 2 once, then re-run this script)"
+fi
+
+echo
 echo "TODO:"
-echo "iterm: preferences: General -> Closing - uncheck Confirm Quit iTerm ... "
-echo "iTerm: preferences: Appearance: - Dimming affects only text, not backgound."
-echo "iTerm: preferences: Profiles: General: - Working directory - Reuse previous session's directory"
 echo "Configure Maccy..."
 
