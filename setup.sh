@@ -23,6 +23,11 @@ echo "Installing Maccy clipboard manager"
 brew install --cask maccy
 
 echo
+echo "Installing Colima + Docker CLI"
+brew install colima docker
+colima start
+
+echo
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
